@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জেনেটিক্স - গুরুত্বপূর্ণ প্রশ্নসমূহ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f0f7ff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: linear-gradient(to bottom right, #e6f7ff, #f9f0ff);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 150, 0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #4a6fa5, #8b5a9f);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px dashed #d1e3ff;
+        }
+        
+        h1 {
+            color: #2c3e8f;
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #4a6fa5, transparent);
+        }
+        
+        .subtitle {
+            color: #5d6db6;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .author-date {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0f5ff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #4a6fa5;
+        }
+        
+        h2 {
+            color: #3a4b9e;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1ecff;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #5d6db6;
+            margin: 25px 0 15px 0;
+            font-size: 1.4rem;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .important-section {
+            background-color: #f8fbff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #d1e3ff;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 100, 0.05);
+        }
+        
+        .less-important-section {
+            background-color: #fdfcff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px dashed #e1d4f7;
+            margin-bottom: 30px;
+        }
+        
+        ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        .question-list {
+            counter-reset: question-counter;
+        }
+        
+        .question-list li {
+            list-style-type: none;
+            counter-increment: question-counter;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: white;
+            border-radius: 8px;
+            border-left: 4px solid #5d6db6;
+            box-shadow: 0 3px 8px rgba(0, 0, 100, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .question-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 0, 100, 0.08);
+        }
+        
+        .question-list li::before {
+            content: counter(question-counter) ". ";
+            font-weight: bold;
+            color: #4a6fa5;
+            margin-right: 8px;
+        }
+        
+        .question-list-secondary {
+            counter-reset: secondary-counter;
+        }
+        
+        .question-list-secondary li {
+            list-style-type: none;
+            counter-increment: secondary-counter;
+            padding: 10px 15px;
+            margin-bottom: 12px;
+            background-color: white;
+            border-radius: 6px;
+            border-left: 3px solid #8b5a9f;
+        }
+        
+        .question-list-secondary li::before {
+            content: "* " counter(secondary-counter) ". ";
+            font-weight: bold;
+            color: #8b5a9f;
+            margin-right: 8px;
+        }
+        
+        .note {
+            background-color: #fff9e6;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #ffcc00;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e1ecff;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .dna-icon {
+            font-size: 2rem;
+            color: #4a6fa5;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .author-date {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .important-section, .less-important-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="dna-icon">🧬</span>জেনেটিক্স [গ বিভাগ]</h1>
+            <div class="subtitle">গুরুত্বপূর্ণ প্রশ্ন ও উত্তরসূচি</div>
+            
+            <div class="author-date">
+                <div><strong>নাম:</strong> Nayeem Mirdha</div>
+                <div><strong>তারিখ:</strong> 09 January 2026</div>
+            </div>
+        </header>
+        
+        <div class="section">
+            <h2>প্রধান প্রশ্নসমূহ</h2>
+            <p>নিচের ১২টি প্রশ্নের উত্তর অবশ্যই পড়তে হবে:</p>
+            
+            <div class="important-section">
+                <h3>গুরুত্বপূর্ণ ১২টি প্রশ্ন</h3>
+                <ol class="question-list">
+                    <li>DNA এর অর্ধ-সংরক্ষণশীল অনুলিপন পদ্ধতির বর্ণনা দাও এবং স্বপক্ষে প্রমাণ উল্লেখ কর।</li>
+                    <li>DNA-ই কৌলিক পদার্থ/জিন। -Hershey এবং Chase এর পরীক্ষা দ্বারা প্রমাণ কর।</li>
+                    <li>উপযুক্ত উদাহরণসহ ৯:৭ অনুপাতটি (পরিপূরক জিন) ব্যাখ্যা কর।</li>
+                    <li>উপযুক্ত উদাহরণসহ ১২:৩:১ অনুপাতটি (প্রকট এপিস্ট্যাসিস)- ব্যাখ্যা কর।</li>
+                    <li>একটি ৩ পয়েন্ট ক্রস থেকে জিনের ক্রম, জিন ম্যাপিং ও কো-ইনসিডেন্স নির্ণয়ের ম্যাথ।</li>
+                    <li>লিঙ্গ কি? লিঙ্গ নির্ধারনে ক্রোমোজোমীয় মতবাদগুলো বর্ণনা কর।</li>
+                    <li>জিনের গঠন সম্পর্কিত সনাতনী ও আধুনিক ধারনা বর্ণনা কর।</li>
+                    <li>জিন-এনজাইম সম্পর্ক কি? 'এক জিন এক এনজাইম' মতবাদ ব্যাখ্যা কর।</li>
+                    <li>মিউটেশন বা পরিব্যক্তি কি? মিউটেশনের শ্রেণিবিভাগ বর্ণনা কর।</li>
+                    <li>Drosophila-তে প্রচ্ছন্ন মিউটেশনের উপস্থিতি নির্ণয়ে মুলারের ClB পদ্ধতিটি বর্ণনা কর।</li>
+                    <li>বহিঃক্রোমোজোমীয়/সাইটোপ্লাজমিক বংশানুক্রমিতা কি? তিনটি উদাহরণসহ ব্যাখ্যা কর।</li>
+                    <li>প্লাজমিড কি? প্লাজমিডের শ্রেণিবিভাগ ও গুরুত্ব লিখ।</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>স্বল্প গুরুত্বপূর্ণ প্রশ্নসমূহ</h2>
+            <p>আরও যা দেখতে পারো [স্বল্প গুরুত্বপূর্ণ]:</p>
+            
+            <div class="less-important-section">
+                <ol class="question-list-secondary">
+                    <li>উপযুক্ত উদাহরণসহ ১৫:১ অনুপাতটি (দ্বৈত প্রকট এটিস্ট্যাসিস)- ব্যাখ্যা কর।</li>
+                    <li>উপযুক্ত উদাহরণসহ ৩:৬:৩:১:২:১ অনুপাতটি (পূর্ণ-অসম্পূর্ণ প্রকটতা)- ব্যাখ্যা কর।</li>
+                    <li>লিংকেজ কি? এর বৈশিষ্ট্য ও শ্রেণিবিভাগ আলোচনা কর।</li>
+                    <li>ক্রসিংওভার কি? এর শ্রেণিবিভাগ ও তাৎপর্য আলোচনা কর।</li>
+                    <li>ক্রসিংওভার মিয়োসিসের কোন ধাপে ঘটে? এর কোষবিদ্যাগত প্রমাণে একটি পরীক্ষা বর্ননা কর।</li>
+                    <li>লিঙ্গ নির্ধারনে জেনেটিক ব্যালেন্স মতবাদ আলোচনা কর।/ Drosophila-এর লিঙ্গ নির্ধারন কৌশল বর্ননা কর।</li>
+                    <li>জেনেটিক রিকম্বিনেশন কি? ব্যাকটেরিয়ার কনজুগেশনে সংঘটিত জেনেটিক রিকম্বিনেশন পদ্ধতি বর্ণনা কর।</li>
+                </ol>
+            </div>
+            
+            <div class="note">
+                <strong>দ্রষ্টব্য:</strong> উপরোক্ত প্রশ্নসমূহ জেনেটিক্স বিষয়ের গভীর অনুধাবনের জন্য অত্যন্ত গুরুত্বপূর্ণ। প্রধান ১২টি প্রশ্নের উত্তর ভালোভাবে আয়ত্ত করতে হবে, এরপর স্বল্প গুরুত্বপূর্ণ প্রশ্নগুলো পড়া যেতে পারে।
+            </div>
+        </div>
+        
+        <footer>
+            <p>জেনেটিক্স বিষয়ের প্রস্তুতি - Nayeem Mirdha</p>
+            <p>© ২০২৬ - সমস্ত অধিকার সংরক্ষিত</p>
+        </footer>
+    </div>
+    
+    <script>
+        // প্রশ্নগুলোতে ক্লিক করলে হাইলাইট করার ফাংশন
+        document.querySelectorAll('.question-list li, .question-list-secondary li').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('highlighted');
+            });
+        });
+        
+        // পৃষ্ঠা লোড হওয়ার সময় তারিখ আপডেট
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.querySelector('.author-date div:nth-child(2)');
+            const today = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = today.toLocaleDateString('bn-BD', options);
+            
+            // যদি তারিখ পরিবর্তন করতে চান, নিচের লাইনটি আনকমেন্ট করুন
+            // dateElement.innerHTML = `<strong>তারিখ:</strong> ${formattedDate}`;
+        });
+    </script>
+</body>
+</html>
