@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ইকোলজি পরীক্ষার প্রস্তুতি পরামর্শ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f0fff7;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: linear-gradient(to bottom right, #f0fff5, #f5fff0);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 100, 50, 0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #2e8b57, #3cb371);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px dashed #c1e8d4;
+        }
+        
+        h1 {
+            color: #2e8b57;
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #3cb371, transparent);
+        }
+        
+        .subtitle {
+            color: #3a9e5d;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .author-date {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f0fff5;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #2e8b57;
+        }
+        
+        h2 {
+            color: #2e8b57;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4f3e2;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #3a9e5d;
+            margin: 25px 0 15px 0;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .advice-section {
+            background-color: #f8fff7;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #c1e8d4;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 100, 50, 0.05);
+        }
+        
+        .important-points {
+            background-color: #fff9e6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffcc00;
+        }
+        
+        ol, ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        .advice-list {
+            counter-reset: advice-counter;
+        }
+        
+        .advice-list li {
+            list-style-type: none;
+            counter-increment: advice-counter;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            border-left: 4px solid #3cb371;
+            box-shadow: 0 3px 8px rgba(0, 100, 50, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .advice-list li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 100, 50, 0.08);
+        }
+        
+        .advice-list li::before {
+            content: counter(advice-counter) ". ";
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #2e8b57;
+            margin-right: 12px;
+            background-color: #e8f7ef;
+            padding: 8px 14px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+        }
+        
+        .bullet-list li {
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            background-color: white;
+            border-radius: 6px;
+            border-left: 3px solid #3cb371;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .bullet-list li::before {
+            content: "•";
+            font-weight: bold;
+            color: #2e8b57;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+        }
+        
+        .number-list {
+            counter-reset: number-counter;
+            list-style-type: none;
+        }
+        
+        .number-list li {
+            counter-increment: number-counter;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            background-color: white;
+            border-radius: 6px;
+            border-left: 3px solid #8b5a9f;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .number-list li::before {
+            content: counter(number-counter) ".";
+            font-weight: bold;
+            color: #8b5a9f;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+        }
+        
+        .note {
+            background-color: #e8f7ef;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #2e8b57;
+            font-style: italic;
+        }
+        
+        .highlight {
+            background-color: #fff9e6;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d4f3e2;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .eco-icon {
+            font-size: 2rem;
+            color: #2e8b57;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .tip-icon {
+            color: #ff9900;
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .author-date {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .advice-section {
+                padding: 15px;
+            }
+            
+            .advice-list li {
+                padding: 15px;
+            }
+            
+            .advice-list li::before {
+                padding: 5px 10px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="eco-icon">🌿</span>ইকোলজি পরীক্ষার প্রস্তুতি পরামর্শ</h1>
+            <div class="subtitle">সফলতার জন্য কার্যকরী কৌশল ও পদ্ধতি</div>
+            
+            <div class="author-date">
+                <div><strong>নাম:</strong> Nayeem Mirdha</div>
+                <div><strong>তারিখ:</strong> 3 January 2026</div>
+            </div>
+        </header>
+        
+        <div class="section">
+            <h2>ইকোলজি পরীক্ষার জন্য বিশেষ পরামর্শ</h2>
+            <p>ইকোলজি (পরিবেশবিদ্যা) এক্সামের রচনামূলক প্রশ্ন হুবহু মুখস্থ লিখতে হবে এটা আবশ্যক নয়। বরং কিছু কৌশল অনুসরণ করে আপনি আরও ভালো ফলাফল করতে পারেন। নিচের পরামর্শগুলো অনুসরণ করুন:</p>
+            
+            <div class="important-points">
+                <h3><span class="tip-icon">💡</span>মনে রাখার মূলনীতি:</h3>
+                <p>ইকোলজি একটি ধারণাভিত্তিক বিষয়। এখানে মুখস্থের চেয়ে বোঝার উপর বেশি গুরুত্ব দিতে হবে। প্রতিটি ধারণা ভালোভাবে বুঝে নিন, তারপর নিজের ভাষায় উপস্থাপন করুন।</p>
+            </div>
+        </div>
+        
+        <div class="advice-section">
+            <h2>প্রধান তিনটি পরামর্শ</h2>
+            
+            <ol class="advice-list">
+                <li>
+                    <h3>বেসিক আইডিয়া থেকে নিজের মতো করে লিখুন</h3>
+                    <p>মুখস্থ না করে বেসিক ধারণাগুলো বুঝে নিন, তারপর নিজের ভাষায় যতটা পারুন লিখুন:</p>
+                    <ul class="bullet-list">
+                        <li><span class="highlight">ধারণাগুলো ভেঙে বুঝুন:</span> জটিল ধারণাগুলো ছোট ছোট অংশে ভাগ করে বুঝার চেষ্টা করুন</li>
+                        <li><span class="highlight">নিজের উদাহরণ তৈরি করুন:</span> বইয়ে দেওয়া উদাহরণের পাশাপাশি নিজের তৈরি উদাহরণ ব্যবহার করুন</li>
+                        <li><span class="highlight">সহজ ভাষা ব্যবহার করুন:</span> জটিল শব্দের বদলে সহজ ও সাবলীল ভাষায় লিখুন</li>
+                        <li><span class="highlight">মূল বিষয়বস্তু ধরে রাখুন:</span> নিজের ভাষায় লিখতে গিয়ে মূল বিষয়বস্তু যেন না হারায় সেদিকে খেয়াল রাখুন</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <h3>গ-বিভাগের প্রশ্ন বড় পরিসরে লিখার চেষ্টা করুন</h3>
+                    <p>গ-বিভাগের প্রশ্নে বেশি নম্বর থাকে, তাই এগুলো বিস্তারিতভাবে লিখুন:</p>
+                    <ul class="bullet-list">
+                        <li><span class="highlight">ভূমিকা দিয়ে শুরু করুন:</span> প্রশ্নের বিষয়বস্তুর একটি সংক্ষিপ্ত ভূমিকা লিখুন</li>
+                        <li><span class="highlight">বিস্তারিত ব্যাখ্যা দিন:</span> প্রতিটি পয়েন্ট পরিষ্কারভাবে ব্যাখ্যা করুন</li>
+                        <li><span class="highlight">চিত্র ও উদাহরণ দিন:</span> যেখানে সম্ভব চিত্র অঙ্কন করুন বা উদাহরণ দিন</li>
+                        <li><span class="highlight">প্রয়োগ ও গুরুত্ব লিখুন:</span> ধারণাগুলোর বাস্তব জীবনে প্রয়োগ ও গুরুত্ব উল্লেখ করুন</li>
+                        <li><span class="highlight">সংক্ষিপ্ত উপসংহার দিন:</span> শেষে একটি সংক্ষিপ্ত উপসংহার লিখুন</li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <h3>প্যারাগ্রাফ স্টাইলে না লিখে বুলেট পয়েন্ট বা নম্বর করে লিখুন</h3>
+                    <p>গবেষণায় দেখা গেছে, সাংগঠনিকভাবে লেখা উত্তর মূল্যায়নকারীর কাছে বেশি গ্রহণযোগ্য হয়:</p>
+                    <ul class="number-list">
+                        <li><span class="highlight">গঠনমূলক উপস্থাপনা:</span> নম্বর বা বুলেট পয়েন্ট ব্যবহার করে উত্তর সাজান</li>
+                        <li><span class="highlight">স্পষ্ট শিরোনাম ব্যবহার:</span> প্রতিটি অংশের জন্য ছোট শিরোনাম ব্যবহার করুন</li>
+                        <li><span class="highlight">হাইলাইট গুরুত্বপূর্ণ পয়েন্ট:</span> গুরুত্বপূর্ণ শব্দ বা ধারণাগুলো হাইলাইট করুন</li>
+                        <li><span class="highlight">সাবহেডিং ব্যবহার:</span> বড় উত্তরগুলোকে ছোট ছোট সাবহেডিংয়ে বিভক্ত করুন</li>
+                        <li><span class="highlight">পরিষ্কার হস্তাক্ষর:</span> পরিষ্কার ও পড়া যায় এমন হস্তাক্ষরে লিখুন</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <div class="note">
+                <h3><span class="tip-icon">📌</span>ইকোলজি পরীক্ষার জন্য অতিরিক্ত টিপস:</h3>
+                <ul class="bullet-list">
+                    <li>ইকোলজির বিভিন্ন ধারণার মধ্যে আন্তঃসম্পর্ক বুঝার চেষ্টা করুন</li>
+                    <li>বাস্তব জীবনের উদাহরণ (স্থানীয় বাস্তুতন্ত্র, জলবায়ু পরিবর্তন ইত্যাদি) মনে রাখুন</li>
+                    <li>গুরুত্বপূর্ণ সংজ্ঞাগুলো ঠিকমত আয়ত্ত করুন</li>
+                    <li>পূর্ববর্তী বছরের প্রশ্নগুলো অনুশীলন করুন</li>
+                    <li>পরীক্ষার সময় সময় ব্যবস্থাপনা করুন - প্রতিটি প্রশ্নের জন্য নির্দিষ্ট সময় বরাদ্দ রাখুন</li>
+                </ul>
+            </div>
+            
+            <div class="advice-section">
+                <h3>ইকোলজিতে ভালো করার সূত্র</h3>
+                <p>ইকোলজিতে ভালো ফলাফলের জন্য এই সূত্রটি মনে রাখুন:</p>
+                <div style="text-align: center; margin: 20px 0; padding: 15px; background: linear-gradient(to right, #e8f7ef, #f0fff5); border-radius: 10px;">
+                    <p style="font-size: 1.2rem; font-weight: bold; color: #2e8b57;">
+                        ইকোলজি সাফল্য = (মৌলিক ধারণা + বাস্তব উদাহরণ) × সাংগঠনিক উপস্থাপনা
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>আপনার ইকোলজি পরীক্ষার প্রস্তুতিতে এই পরামর্শগুলো সহায়ক হোক</p>
+            <p>শুভকামনা রইলো! ইনশাআল্লাহ ভালো ফলাফল করবেন! 😊</p>
+            <p style="margin-top: 10px;">© ২০২৬ - Nayeem Mirdha</p>
+        </footer>
+    </div>
+    
+    <script>
+        // পরামর্শগুলোতে ক্লিক করলে হাইলাইট করার ফাংশন
+        document.querySelectorAll('.advice-list li, .bullet-list li, .number-list li').forEach(item => {
+            item.addEventListener('click', function() {
+                this.classList.toggle('highlighted');
+                
+                // সাময়িকভাবে ব্যাকগ্রাউন্ড রং পরিবর্তন
+                const originalBackground = this.style.backgroundColor;
+                this.style.backgroundColor = '#e8f7ef';
+                
+                setTimeout(() => {
+                    if (this.classList.contains('highlighted')) {
+                        this.style.backgroundColor = '#e8f7ef';
+                    } else {
+                        this.style.backgroundColor = originalBackground;
+                    }
+                }, 300);
+            });
+        });
+        
+        // পৃষ্ঠা লোড হওয়ার সময় তারিখ আপডেট
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.querySelector('.author-date div:nth-child(2)');
+            
+            // যদি কখনও বর্তমান তারিখ দেখাতে চান
+            // const today = new Date();
+            // const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            // const formattedDate = today.toLocaleDateString('bn-BD', options);
+            // dateElement.innerHTML = `<strong>তারিখ:</strong> ${formattedDate}`;
+            
+            // ফুটারে বর্তমান বছর দেখানোর জন্য
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.querySelector('footer p:last-child');
+            if (yearElement) {
+                yearElement.innerHTML = `© ${currentYear} - Nayeem Mirdha`;
+            }
+        });
+    </script>
+</body>
+</html>
